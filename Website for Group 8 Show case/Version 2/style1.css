@@ -1,0 +1,106 @@
+/* Import futuristic font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('images/ar-glasses-bg.jpg') no-repeat center center/cover;
+    color: #00ffff; /* Neon Cyan for contrast */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Add Dark Overlay for Readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* Semi-transparent dark layer */
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Text Section */
+.text-section {
+    width: 40%;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Image Section */
+.image-section {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Large Image Display */
+.image-container {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0 0 15px cyan);
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px #00ffff);
+}
+
+/* Thumbnail Image Selection */
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff00ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px #ff00ff;
+}

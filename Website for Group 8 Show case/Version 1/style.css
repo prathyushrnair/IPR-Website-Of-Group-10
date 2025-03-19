@@ -1,0 +1,112 @@
+/* Import futuristic font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('images/ar-glasses-bg.jpg') no-repeat center center/cover;
+    color: #00ffff; /* Neon Cyan for contrast */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Add Dark Overlay for Readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* Semi-transparent dark layer */
+    z-index: -1;
+}
+
+/* Header */
+header {
+    padding: 30px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+}
+
+/* Product Image */
+#product img {
+    width: 300px;
+    margin-top: 20px;
+    filter: drop-shadow(0 0 15px cyan);
+    transition: transform 0.3s ease-in-out;
+}
+
+#product img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px #00ffff);
+}
+
+/* Forms */
+input {
+    padding: 12px;
+    margin: 10px;
+    width: 250px;
+    border: 2px solid cyan;
+    background: #111;
+    color: #0ff;
+    text-align: center;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #0ff;
+    border-radius: 8px;
+}
+
+/* Hover Effect */
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+/* Click Effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff00ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px #ff00ff;
+}
